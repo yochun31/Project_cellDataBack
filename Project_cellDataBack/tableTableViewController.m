@@ -84,20 +84,20 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *identifier = @"currencyCell";
-    tableTableViewCell *cell = (tableTableViewCell *)[tableView dequeueReusableCellWithIdentifier:identifier];
-    if (cell == nil) {
-        cell = [[tableTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
-    }
-    
-    cell.name.text = [currencyNameList objectAtIndex:indexPath.row];
-    cell.aka.text = [currencyAkaList objectAtIndex:indexPath.row];
-    
-//    UITableViewCell *cell =[tableView dequeueReusableCellWithIdentifier:identifier];
+//    tableTableViewCell *cell = (tableTableViewCell *)[tableView dequeueReusableCellWithIdentifier:identifier];
 //    if (cell == nil) {
-//                cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
-//            }
-//        
-//    cell.textLabel.text = [currencyNameList objectAtIndex:indexPath.row];
+//        cell = [[tableTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
+//    }
+//    
+//    cell.name.text = [currencyNameList objectAtIndex:indexPath.row];
+//    cell.aka.text = [currencyAkaList objectAtIndex:indexPath.row];
+    
+    UITableViewCell *cell =[tableView dequeueReusableCellWithIdentifier:identifier];
+    if (cell == nil) {
+                cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
+            }
+        
+    cell.textLabel.text = [currencyNameList objectAtIndex:indexPath.row];
 
     return cell;
 }
