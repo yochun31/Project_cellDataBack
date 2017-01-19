@@ -73,7 +73,7 @@
     }
     
     if (_subject == nil) {
-        cell.textLabel.text = @"Select a Product";
+        cell.textLabel.text = @"Select 貨幣";
     } else {
         cell.textLabel.text = _subject;
     }
