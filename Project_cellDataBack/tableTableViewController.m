@@ -111,8 +111,12 @@
     //[self.navigationController popViewControllerAnimated:YES];
     
    [self dismissViewControllerAnimated:YES completion:nil];
+<<<<<<< HEAD
     
     NSLog(@"new");
+=======
+    NSLog(@"m");
+>>>>>>> newbranch
 }
 
 
