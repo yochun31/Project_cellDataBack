@@ -81,6 +81,11 @@
     return cell;
 }
 
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+{
+    return nil;
+}
+
 #pragma mark - cell click event
 - (void) tableView: (UITableView *) tableView didSelectRowAtIndexPath: (NSIndexPath *) indexPath {
     
@@ -92,9 +97,9 @@
 //        [self presentViewController:nextpage animated:YES completion:nil];
         
         tableTableViewController *tableView = [[tableTableViewController alloc]init];
-        tableTableViewCell *tablecell = [[tableTableViewCell alloc]init];
+        
         [tableView setDelegate:self];
-        [tablecell setDelegate:self];
+
         [self presentViewController:tableView animated:YES completion:nil];
         
     }
